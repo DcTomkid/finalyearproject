@@ -96,5 +96,5 @@ export class PaystackService {
 // Create a singleton instance
 export const paystackService = new PaystackService(
   // In production, this should come from environment variables
-  import.meta.env.VITE_REACT_APP_PAYSTACK_PUBLIC_KEY || 'pk_test_your_paystack_public_key_here'
+  import.meta.env.VITE_REACT_APP_PAYSTACK_PUBLIC_KEY || 'pk_test_53ec44ad0713bf5eb4d5ab8199e4783b6ae4dfb5'
 );
