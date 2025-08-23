@@ -35,10 +35,12 @@ export interface Payment {
 export interface PaymentFormData {
   feeId: string;
   amount: number;
-  paymentMethod: 'card' | 'bank' | 'ussd';
+  paymentMethod: 'paystack' | 'bank' | 'ussd';
   cardNumber?: string;
   expiryDate?: string;
   cvv?: string;
   bankCode?: string;
   accountNumber?: string;
+  transactionId?: string;
+  paystackReference?: string;
 }

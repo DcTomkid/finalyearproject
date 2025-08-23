@@ -39,11 +39,11 @@ function App() {
       feeId: paymentData.feeId,
       feeName: fees.find(f => f.id === paymentData.feeId)?.name || '',
       amount: paymentData.amount,
-      paymentMethod: paymentData.paymentMethod === 'card' ? 'Credit Card' : 
+      paymentMethod: paymentData.paymentMethod === 'paystack' ? 'Paystack' : 
                     paymentData.paymentMethod === 'bank' ? 'Bank Transfer' : 'USSD',
       paymentDate: new Date().toISOString().split('T')[0],
       status: 'completed',
-      transactionId: `TXN${Date.now()}`,
+      transactionId: paymentData.transactionId || `TXN${Date.now()}`,
       receiptUrl: '#'
     };
 
